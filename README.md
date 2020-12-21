@@ -1,4 +1,4 @@
-# lsass Automation
+# FTP Bot
 > Original Author: Maor Sabag
 
 
