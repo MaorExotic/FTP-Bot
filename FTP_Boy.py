@@ -50,8 +50,10 @@ def BruteLog(host, passwords, username, release):
         ftp.login(username, passwords)
         print("[+] Password Found: {}".format(passwords))
         found = True
-    except:
-        pass
+    except ftplib.error_perm as e:
+        if not('Login incorrect' in str(e)):
+            print("[-] Check the username again")
+            exit(0)
     finally:
          if release: screen_lock.release()
 
